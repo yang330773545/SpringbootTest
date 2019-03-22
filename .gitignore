@@ -18,3 +18,9 @@
 /redis/*.gitignore
 /redis/*.cmd
 /mq-producer/*.gitignore
+/jpa/*.gitignore
+/jpa/mvnw
+/jpa/*.cmd
+/jwt/*.gitignore
+/jwt/mvnw
+/jwt/*.cmd
