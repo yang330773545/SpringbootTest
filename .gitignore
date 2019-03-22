@@ -24,3 +24,5 @@
 /jwt/*.gitignore
 /jwt/mvnw
 /jwt/*.cmd
+/jpa/.mvn
+/jwt/.mvn
