@@ -26,3 +26,7 @@
 /jwt/*.cmd
 /jpa/.mvn
 /jwt/.mvn
+/shiro-session/.mvn
+/shiro-session/.gitignore
+/shiro-session/mvnw
+/shiro-session/*.cmd
