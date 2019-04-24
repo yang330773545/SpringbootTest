@@ -89,9 +89,6 @@ public class JwtUtil {
      */
     public static String generateToken(String username) {
         HashMap<String, Object> map = new HashMap<>();
-        System.out.println(username);
-        System.out.println(SECRET);
-        System.out.println(EXPIRATION_TIME);
         // you can put any data in the map
         map.put("username", username);
         String jwt = Jwts.builder().setClaims(map).setExpiration(new Date(System.currentTimeMillis() + EXPIRATION_TIME))
