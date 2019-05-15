@@ -40,3 +40,8 @@
 /SMSloginbackground/*.gitignore
 /SMSloginbackground/mvnw
 /SMSloginbackground/mvnw.cmd
+/we-not-chat/src/test
+/we-not-chat/.mvn
+/we-not-chat/*.gitignore
+/we-not-chat/mvnw
+/we-not-chat/mvnw.cmd
