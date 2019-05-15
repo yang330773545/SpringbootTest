@@ -30,3 +30,13 @@
 /shiro-session/.gitignore
 /shiro-session/mvnw
 /shiro-session/*.cmd
+/memcached/src/test
+/memcached/.mvn
+/memcached/*.gitignore
+/memcached/mvnw
+/memcached/mvnw.cmd
+/SMSloginbackground/.mvn
+/SMSloginbackground/src/test
+/SMSloginbackground/*.gitignore
+/SMSloginbackground/mvnw
+/SMSloginbackground/mvnw.cmd
