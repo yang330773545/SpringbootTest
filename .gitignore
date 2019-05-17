@@ -45,3 +45,10 @@
 /we-not-chat/*.gitignore
 /we-not-chat/mvnw
 /we-not-chat/mvnw.cmd
+/boot-security/.mvn
+/boot-security/src/test
+/boot-security/src/main/resources/static
+/boot-security/src/main/resources/templates
+/boot-security/.gitignore
+/boot-security/mvnw.cmd
+/boot-security/mvnw
