@@ -97,13 +97,13 @@ public class JwtUtil {
     }
  
     /**
-     * 校验jwtToken
+     *   	获取jwtToken里边的username
      *
      * @param token
      * @return
      */
     public static String validateToken(String token) {
-        if (token != null) {
+        if (token != null && token.trim().length()!=0) {
             Map<String, Object> body = Jwts.parser().setSigningKey(SECRET).parseClaimsJws(token).getBody();
             String username = (String) (body.get("username"));
             if (username == null || username.isEmpty()) {
@@ -113,6 +113,21 @@ public class JwtUtil {
             }
         } else {
             throw new TokenValidationException("Missing token");
+        }
+    }
+    
+    public static boolean checkJwt(String token) {
+    	if(token==null || token.trim().length()==0) {
+    		return false;
+    	}
+    	Map<String, Object> body = Jwts.parser().setSigningKey(SECRET).parseClaimsJws(token).getBody();
+    	int time=(int) body.get("exp");
+    	if(System.currentTimeMillis()<time) return false;
+    	String username = (String) (body.get("username"));
+    	if (username == null || username.isEmpty()) {
+            return false;
+        } else {
+             return true;
         }
     }
      
