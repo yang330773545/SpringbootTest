@@ -52,3 +52,10 @@
 /boot-security/.gitignore
 /boot-security/mvnw.cmd
 /boot-security/mvnw
+/boot-banner/.mvn
+/boot-banner/.gitignore
+/boot-banner/mvnw
+/boot-banner/mvnw.cmd
+/boot-banner/src/test
+/boot-banner/src/main/resources/static
+/boot-banner/src/main/resources/templates
