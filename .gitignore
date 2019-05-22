@@ -70,3 +70,8 @@
 /send-mail/.gitignore
 /send-mail/mvnw
 /send-mail/mvnw.cmd
+/Actuator/.mvn
+/Actuator/.gitignore
+/Actuator/mvnw
+/Actuator/mvnw.cmd
+/Actuator/src/test
