@@ -75,3 +75,15 @@
 /Actuator/mvnw
 /Actuator/mvnw.cmd
 /Actuator/src/test
+/admin/admin/.mvn
+/admin/admin/.gitignore
+/admin/admin/mvnw
+/admin/admin/mvnw.cmd
+/admin/admin/src/test
+/admin/admin/src/main/resources/static
+/admin/admin/src/main/resources/templates
+/admin/admin-client/.mvn
+/admin/admin-client/src/test
+/admin/admin-client/.gitignore
+/admin/admin-client/mvnw
+/admin/admin-client/mvnw.cmd
