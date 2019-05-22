@@ -59,3 +59,14 @@
 /boot-banner/src/test
 /boot-banner/src/main/resources/static
 /boot-banner/src/main/resources/templates
+/rabbitmq/mvnw.cmd
+/rabbitmq/mvnw
+/rabbitmq/.gitignore
+/rabbitmq/.mvn
+/rabbitmq/src/main/resources/static
+/rabbitmq/src/main/resources/templates
+/send-mail/.mvn
+/send-mail/src/main/resources/static
+/send-mail/.gitignore
+/send-mail/mvnw
+/send-mail/mvnw.cmd
