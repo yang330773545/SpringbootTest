@@ -87,3 +87,8 @@
 /admin/admin-client/.gitignore
 /admin/admin-client/mvnw
 /admin/admin-client/mvnw.cmd
+/file/.mvn
+/file/static
+/file/.gitignore
+/file/mvnw
+/file/mvnw.cmd
