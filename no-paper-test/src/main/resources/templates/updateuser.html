@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<!-- Bootstrap 3.3.7 -->
+	<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <!-- Theme style -->
+    <link rel="stylesheet" th:href="@{/css/dist/AdminLTE.min.css}">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+    folder instead of downloading all of them to reduce the load. -->
+ 	<link rel="stylesheet" th:href="@{/css/_all-skins.min.css}">
+	<title>修改秘书信息</title>
+</head>
+<body>
+	<section class="content">
+      <div class="row">
+      		<div class="col-md-12">
+				<div class="box box-primary">
+			          <div class="box-header with-border">
+			             <h3 class="box-title">修改秘书信息</h3>
+			          </div>
+		            <!-- /.box-header -->		          
+		              <div class="box-body">
+		                <div class="form-group">
+		                  <input type="hidden" class="form-control" id="id" th:value="${user.id}">
+		                  <label for="exampleInputEmail1">用户名</label>
+		                  <input type="text" class="form-control" id="username" th:value="${user.userName}" 
+		                  disabled>
+		                </div>
+		                <div class="form-group">
+		                  <label for="exampleInputEmail1">名称</label>
+		                  <input type="text" class="form-control" id="name" th:value="${user.name}">
+		                </div>
+		                <div class="form-group">
+		                  <label for="exampleInputPassword1">密码</label>
+		                  <input type="password" class="form-control" id="password" th:value="${user.passWord}">
+		                </div>		                
+		              </div>
+		              <!-- /.box-body -->
+
+		              <div class="box-footer">
+		                <button type="submit" id="submit" class="btn btn-primary">确认修改</button>
+		              </div>		        
+		        </div>
+      		</div>
+      </div>
+  </section>
+	
+  <!-- jQuery 3 -->
+  <script th:src="@{/js/master/jquery.min.js}"></script>
+  <script th:src="@{/js/layer/layer.js}"></script>
+  <script>
+  	$(function(){
+  		$("#submit").click(function(){
+  			var id =$("#id").val().trim();
+  			var username =$("#username").val().trim();
+			var password =$("#password").val().trim();
+			var name=$("#name").val().trim();
+			if(password=='' || name==''){
+				layer.msg('选项内容不能为空!', {icon: 5});
+			}
+			else{
+				var date={id:id,userName:username,passWord:password,name:name};
+				var dates=JSON.stringify(date);
+				 $.ajax({
+		 			   url : "/updatenameandpassword",
+		 			   type : "POST",
+		 			   dataType : "JSON",
+		 			   contentType: "application/json; charset=utf-8",
+		 			   data : dates,
+		 			   success : function (data) {
+		 			    if(data==true){
+		 			    	layer.alert('修改成功', {icon: 4});
+		 			        setTimeout(function () {
+			 			    	  window.parent.location.reload();//刷新父页面
+				                  var index = parent.layer.getFrameIndex(window.name); //获取窗口索引  
+				                  parent.layer.close(index);
+				 			 }, 1000); 
+		 			    }
+		 			    else{
+		 			    	layer.alert('修改失败请稍后再试',{icon: 5});
+		 			    }
+		 			   }	 			 
+		 		  })
+			}
+  		})
+  	})	
+
+  </script>	 
+</body>
+</html>

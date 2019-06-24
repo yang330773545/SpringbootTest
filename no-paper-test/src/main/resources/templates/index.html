@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"></link>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+<title>无纸化测试</title>
+</head>
+<script th:src="@{/js/jquery-3.4.0.min.js}"></script>
+<body>
+	<p th:text="'Hello！, ' + ${name} + '!'" >hello！C</p>
+	<p th:text="#{name}" >hello！C</p>
+	<a th:href="@{http://www.baidu.com}">绝对路径</a>
+  	<p th:text=" ${demo.name}" >hello！C</p>
+	
+	<div th:object="${demo}">
+	  <p>Name: <span th:text="*{name}">Sebastian</span>.</p>
+	  <p>Surname: <span th:text="*{age}">Pepper</span>.</p>
+	</div>
+	<!-- 
+		index:当前迭代对象的 index（从0开始计算）
+		count: 当前迭代对象的 index(从1开始计算)
+		size:被迭代对象的大小
+		current:当前迭代变量
+		even/odd:布尔值，当前循环是否是偶数/奇数（从0开始计算）
+		first:布尔值，当前循环是否是第一个
+		last:布尔值，当前循环是否是最后一个
+	 -->
+	<tr th:each="list,iterStat : ${list}"> 
+	   <th scope="row" th:text="${list.name}">1</th>
+	   <td th:text="${list.age}">Mark</td>
+	   <td th:text="${iterStat.count}">0</td>
+	</tr>
+	<form>
+		<input id="name" type="text" placeholder="鬼泣下段踢" />
+		<input id="pass" type="password" placeholder="地狱葬送手刀"/>
+		<input id="id" type="button" value="爆山大爷"/>
+	</form>
+
+</body>
+<!--<script type="text/javascript" src="@{/js/jquery-3.4.0.min.js}"></script> -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.bootcss.com/layer/2.3/layer.js"></script>
+<script type="text/javascript">
+	$(function(){
+	   // 开始写 jQuery 代码...
+	   $("#id").click(function(){
+		  var name=$("#name").val();  
+		  name=$.trim(name);
+		  let hahaha="爆山大爷 ";
+		  if(name!=''){
+			  console.log(hahaha);
+			  var date={name:$.trim(name),pass:$.trim(name)};
+			  var dates=JSON.stringify(date);
+			  $.ajax({
+	 			   url : "/look2",
+	 			   type : "POST",
+	 			   dataType : "text",
+	 			   contentType: "application/json; charset=utf-8",
+	 			   data : dates,
+	 			   success : function (data) {
+	 			    if(data=="爆山大爷"){
+	 			    	console.log(hahaha);
+	 			    	layer.msg('尼玛，打个酱油', {icon: 4});
+	 			    }
+	 			    else{
+	 			    	layer.alert('用户名或者密码错误',{icon: 5});
+	 			    }
+	 			   }	 			 
+	 			  })
+		  }
+	   });
+	 }); 
+
+
+</script>
+</html>

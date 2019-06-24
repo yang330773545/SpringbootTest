@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<!-- Bootstrap 3.3.7 -->
+	<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <!-- Theme style -->
+    <link rel="stylesheet" th:href="@{/css/dist/AdminLTE.min.css}">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+    folder instead of downloading all of them to reduce the load. -->
+ 	<link rel="stylesheet" th:href="@{/css/_all-skins.min.css}">
+	<title>添加会议室</title>
+</head>
+<body>
+	<section class="content">
+      <div class="row">
+      		<div class="col-md-12">
+				<div class="box box-primary">
+			          <div class="box-header with-border">
+			             <h3 class="box-title">添加会议室</h3>
+			          </div>
+		            <!-- /.box-header -->		          
+		              <div class="box-body">
+		                <div class="form-group">
+		                  <label for="exampleInputEmail1">会议室名称</label>
+		                  <input type="text" class="form-control" id="name" placeholder="输入会议室名">
+		                </div>
+		                <div class="form-group">
+		                  <label for="exampleInputEmail1">会议室地址</label>
+		                  <input type="text" class="form-control" id="address" placeholder="输入名称">
+		                </div>
+		                <div class="form-group">
+		                  <label for="exampleInputPassword1">会议室中控ip</label>
+		                  <input type="text" class="form-control" id="cenip" placeholder="输入密码">
+		                </div>		                
+		              </div>
+		              <!-- /.box-body -->
+
+		              <div class="box-footer">
+		                <button type="submit" id="submit" class="btn btn-primary">确认添加</button>
+		              </div>		        
+		        </div>
+      		</div>
+      </div>
+  </section>
+	
+  <!-- jQuery 3 -->
+  <script th:src="@{/js/master/jquery.min.js}"></script>
+  <script th:src="@{/js/layer/layer.js}"></script>
+  <script>
+  	$(function(){
+  		$("#submit").click(function(){
+  			var name =$("#name").val().trim();
+			var address =$("#address").val().trim();
+			var cenip=$("#cenip").val().trim();
+			if(name=='' || address=='' || cenip==''){
+				layer.msg('选项内容不能为空!', {icon: 5});
+			}
+			else{
+				
+				var date={name:name,address:address,cenIp:cenip};
+				var dates=JSON.stringify(date);
+				 $.ajax({
+		 			   url : "/addroom",
+		 			   type : "POST",
+		 			   dataType : "JSON",
+		 			   contentType: "application/json; charset=utf-8",
+		 			   data : dates,
+		 			   success : function (data) {
+		 			    if(data==true){
+		 			    	layer.alert('添加成功', {icon: 4});		 			    	
+		 			        setTimeout(function () {
+		 			    	  window.parent.location.reload();//刷新父页面
+			                  var index = parent.layer.getFrameIndex(window.name); //获取窗口索引  
+			                  parent.layer.close(index);
+			 			    }, 1000);  
+		 			    }
+		 			    else{
+		 			    	layer.alert('添加失败请稍后再试',{icon: 5});
+		 			    }
+		 			   }	 			 
+		 		  })
+			}
+  		})
+  	})	
+
+  </script>	 
+</body>
+</html>

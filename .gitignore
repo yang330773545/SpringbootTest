@@ -92,3 +92,8 @@
 /file/.gitignore
 /file/mvnw
 /file/mvnw.cmd
+/no-paper-test/.mvn
+/no-paper-test/.gitignore
+/no-paper-test/mvnw
+/no-paper-test/mvnw.cmd
+/no-paper-test/no_paper.sql

@@ -1,0 +1,287 @@
+<!doctype html>
+<html style="height: auto; min-height: 100%;" xmlns:th="http://www.thymeleaf.org"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>云晫无纸化 | 系统设置 | 参会人管理</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" th:href="@{/css/font-awesome.min.css}">
+  <!-- Ionicons -->
+  <link rel="stylesheet" th:href="@{/css/ionicons.min.css}">
+  <!-- Theme style -->
+  <link rel="stylesheet" th:href="@{/css/dist/AdminLTE.min.css}">
+    <!-- DataTables -->
+  <link rel="stylesheet" th:href="@{/css/dataTables.bootstrap.min.css}">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" th:href="@{/css/_all-skins.min.css}">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+</head>
+<!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+<body class="skin-blue layout-top-nav" style="height: auto; min-height: 100%;">
+<div class="wrapper" style="height: auto; min-height: 100%;">
+
+    <header class="main-header">
+    <nav class="navbar navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="http://www.vinzor.com" class="navbar-brand"><b>云晫</b>无纸化</a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/usermanagement">系统设置<span class="sr-only">(current)</span></a></li>
+            <li><a href="#">会议预约</a></li>
+            <li><a href="#">会议管理</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+        <!-- Navbar Right Menu -->
+        <div class="navbar-custom-menu">
+          <ul class="nav navbar-nav">
+ 
+            <!-- User Account Menu -->
+            <li class="dropdown user user-menu">
+              <!-- Menu Toggle Button -->
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <!-- The user image in the navbar-->
+                <img th:src= "@{/images/background.jpg}" class="user-image" alt="User Image">
+                <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                <span class="hidden-xs">管理员：爆山大爷</span>
+              </a>
+              <ul class="dropdown-menu">
+                <!-- Menu Footer-->
+                <li class="user-footer">
+                  <div class="pull-left">
+                  	<button type="button" id="rpass" class="btn btn-block btn-info">修改密码</button>
+                   <!-- <a id="rpass" class="btn btn-default btn-flat">修改密码</a> -->
+                  </div>
+                  <div class="pull-right">
+                    <a href="/logout" class="btn btn-default btn-danger btn-flat">退出登录</a>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- /.navbar-custom-menu -->
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+  </header>
+  <!-- Full Width Column -->
+  <div class="content-wrapper" style="min-height: 868px;">
+    <div class="container">
+      <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <h1>
+                              无纸化会议
+          <small>版本 1.0</small>
+        </h1>
+        <ol class="breadcrumb">
+          <li><a href="#"><i class="fa fa-dashboard"></i>首页</a></li>
+          <li><a href="#">系统设置</a></li>
+          <li class="active">参会人管理</li>
+        </ol>
+      </section>
+
+      <!-- Main content -->
+      <section class="content">
+		  <div class="row">
+	        <div class="col-md-12">
+	          <div class="box box-primary">
+	            <div class="box-header">
+	              <i class="fa fa-edit"></i>
+
+	              <h3 class="box-title">设置选项</h3>
+	            </div>
+	            <div class="box-body pad table-responsive">
+	              <table class="table table-bordered text-center">
+	                <tbody>
+	                <tr>
+	                  <td>
+	                    <a href="/usermanagement" type="button" class="btn btn-block ">秘书管理</a>
+	                  </td>
+	                  <td>
+	                    <a type="button" href="/meetingroommanagement" class="btn btn-block">会议室管理</a>
+	                  </td>
+	                  <td>
+	                    <a type="button" class="btn btn-block ">设备管理</a>
+	                  </td>
+	                  <td>
+	                    <a type="button" href="/participantmanagement" class="btn btn-block  btn-warning" >参会人管理</a>
+	                  </td>
+	                  <td>
+	                    <a type="button" class="btn btn-block ">座位排布</a>
+	                  </td>
+	                  <td>
+	                    <a type="button" class="btn btn-block ">其他设置</a>
+	                  </td>
+	                </tr>
+	              </tbody></table>
+	            </div>
+		            <div class="box-header">	              
+		              <button id="addparticipant" type="button" class="btn  btn-success btn-sm">添加参会人</button>
+		            </div>
+	           		<div class="box-body pad table-responsive">
+		              <table id="table" class="table table-bordered text-center">
+		              	<thead>
+		                <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">参会人id</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">参会人姓名</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">参会人性别</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">参会人职位</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">参会人手机号</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending">操作</th></tr>
+		                </thead>
+		                <tbody>
+		                <tr th:each="list,iterStat : ${participant_list}"> 
+						   <td th:text="${list.id}">
+			                   1
+			               </td>
+			               <td th:text="${list.name}">
+			                                                          狗子
+			               </td>
+			               <td th:text="${list.sex}">
+			                                                            男
+			               </td>
+			               <td th:text="${list.position}">
+			                                                      铁道部领导
+			               </td>
+			               <td th:text="${list.phoneNumber}">
+			               	123456789
+			               </td>
+			               <td>
+			                 <button type="button" class="btn  btn-info btn-sm"
+								th:onclick="updateParticipantById([[${list.id}]])"
+			                 >编辑</button>
+			                 <button type="button" class="btn  btn-danger btn-sm"
+									th:onclick="deleteParticipantById([[${list.id}]])" 
+			                 >删除</button>
+			               </td>
+						</tr>
+		              </tbody></table>
+		            </div>
+	            <!-- /.box -->
+	          </div>
+	        </div>		
+	      </div>		                              
+        <!-- /.box -->
+      </section>
+      <!-- /.content -->
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="pull-right hidden-xs">
+        <b>版本</b> 1.0.0
+      </div>
+      <strong>Copyright © 2014-2019 <a href="http://www.vinzor.com/">vinzor</a>.</strong> All rights
+      reserved.
+    </div>
+    <!-- /.container -->
+  </footer>
+</div>
+<!-- ./wrapper -->
+
+
+<!-- jQuery 3 -->
+<script th:src="@{/js/master/jquery.min.js}"></script>
+<!-- Bootstrap 3.3.7 -->
+<script th:src="@{/js/bootstrap.min.js}"></script>
+<!-- SlimScroll -->
+<script th:src="@{/js/jquery.slimscroll.min.js}"></script>
+<!-- FastClick -->
+<script th:src="@{/js/fastclick.js}"></script>
+<!-- AdminLTE App -->
+<script th:src="@{/js/adminlte.min.js}"></script>
+<!-- AdminLTE for demo purposes -->
+<script th:src="@{/js/demo.js}"></script>
+<!-- DataTables -->
+<script th:src="@{/js/jquery.dataTables.min.js}"></script>
+<script th:src="@{/js/dataTables.bootstrap.min.js}"></script>
+
+<script th:src="@{/js/layer/layer.js}"></script>
+<script>
+	$(function(){
+		$("#rpass").click(function(){
+			//prompt层
+			layer.prompt({title: '请输入新密码并点击确认', formType: 1}, function(pass, index){
+			  		layer.close(index);
+			  		layer.msg("您输入了"+pass);
+			  });
+			});
+	
+		  //弹出一个iframe层
+	  	$("#addparticipant").click(function(){
+			layer.open({
+		      type: 2,
+		      title: '添加参会人',
+		      maxmin: true,
+		      shadeClose: false, //点击遮罩关闭层
+		      area : ['800px' , '520px'],
+		      content: ''
+		    });
+	  	});
+	  	$('#table').DataTable({
+	  		
+	  	});
+	  	$('#table')
+         .removeClass( 'display' )
+         .addClass('table table-striped table-bordered');
+       	 
+	});
+</script>
+<script>
+	function deleteParticipantById(id){	
+  		layer.confirm('确定要将该参会人移除吗？', {
+	  		btn: ['移除','取消'] //按钮
+	  		}, function(){	  			
+				var urls=
+	  				$.ajax({
+			 			url : urls,
+			 			type : "POST",
+			 			dataType : "JSON",
+			 			success : function (data) {
+				 			if(data==true){
+				 			    layer.msg('删除成功', {icon: 1});	
+				 			    setTimeout(function () {
+				 			    	location.reload();
+				 			    }, 1000);
+				 			}
+				 			else{
+				 			    layer.msg('删除失败请稍后再试', {icon: 5});
+				 			}
+			 			}
+			 			 
+			 		})
+	  			}
+	  	);
+  	}
+</script>
+<script>
+	  	function updateParticipantById(id){			
+		layer.open({
+		      type: 2,
+		      title: '修改参会人信息',
+		      maxmin: true,
+		      shadeClose: false, //点击遮罩关闭层
+		      area : ['800px' , '520px'],
+		      content: ''
+		});  		
+  	}
+	 
+</script>
+</body></html>
