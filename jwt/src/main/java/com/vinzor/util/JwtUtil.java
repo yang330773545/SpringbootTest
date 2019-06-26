@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Value;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 
+//jjwt用于在JVM和Android上创建和验证JSON Web令牌
 public class JwtUtil {
 
 	//Jwts.builder()返回一个JwtBuilder	
@@ -91,8 +92,11 @@ public class JwtUtil {
         HashMap<String, Object> map = new HashMap<>();
         // you can put any data in the map
         map.put("username", username);
-        String jwt = Jwts.builder().setClaims(map).setExpiration(new Date(System.currentTimeMillis() + EXPIRATION_TIME))
-                .signWith(SignatureAlgorithm.HS512, SECRET).compact();
+        String jwt = Jwts.builder()
+        		.setClaims(map)
+        		.setExpiration(new Date(System.currentTimeMillis() + EXPIRATION_TIME))
+                .signWith(SignatureAlgorithm.HS512, SECRET)
+                .compact();
         return jwt;
     }
  
