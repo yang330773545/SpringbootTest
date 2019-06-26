@@ -97,3 +97,7 @@
 /no-paper-test/mvnw
 /no-paper-test/mvnw.cmd
 /no-paper-test/no_paper.sql
+/boot-swagger/.mvn
+/boot-swagger/.gitignore
+/boot-swagger/mvnw
+/boot-swagger/mvnw.cmd
