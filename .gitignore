@@ -101,3 +101,7 @@
 /boot-swagger/.gitignore
 /boot-swagger/mvnw
 /boot-swagger/mvnw.cmd
+/qiniu-file/.mvn
+/qiniu-file/.gitignore
+/qiniu-file/mvnw
+/qiniu-file/mvnw.cmd
