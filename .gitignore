@@ -113,3 +113,7 @@
 /devtools/.gitignore
 /devtools/mvnw
 /devtools/mvnw.cmd
+/command-line-runner/.mvn
+/command-line-runner/.gitignore
+/command-line-runner/mvnw
+/command-line-runner/mvnw.cmd
