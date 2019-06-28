@@ -105,3 +105,7 @@
 /qiniu-file/.gitignore
 /qiniu-file/mvnw
 /qiniu-file/mvnw.cmd
+/boot-useragentutil/.mvn
+/boot-useragentutil/.gitignore
+/boot-useragentutil/mvnw
+/boot-useragentutil/mvnw.cmd
