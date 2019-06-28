@@ -121,3 +121,7 @@
 /web-flux/.gitignore
 /web-flux/mvnw
 /web-flux/mvnw.cmd
+/githuboauth2/.mvn
+/githuboauth2/.gitignore
+/githuboauth2/mvnw
+/githuboauth2/mvnw.cmd
