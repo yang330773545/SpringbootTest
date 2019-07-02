@@ -80,7 +80,7 @@ management.endpoint.shutdown.enabled=true
 ### SMSloginbackground
 自己写的一个短信发送例子使用了网易云，榛子云和阿里云
 ### admin
-是一个监控单个springboot项目或者Eureka集群<br>
+可以监控单个springboot项目或者Eureka集群<br>
 @Configuration<br>
 @EnableAutoConfiguration<br>
 @EnableAdminServer<br>
