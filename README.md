@@ -50,6 +50,13 @@ public class Demo extend Thread{
   }
 ```
 ***
+## 改为springboot2.1.6 pom第一行报错解决方法
+```
+	<properties>
+		<java.version>1.8</java.version>
+		<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
+	</properties>
+```
 ## 简单写一下实现（名称排序）
 ### Actuator
 监控springboot项目<br>
