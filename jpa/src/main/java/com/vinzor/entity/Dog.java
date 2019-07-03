@@ -12,22 +12,23 @@ import javax.persistence.Id;
 public class Dog implements Serializable{
 
 	/**
-	 * 
+	 * 注解用法在User类中
 	 */
 	private static final long serialVersionUID = 8328779276072150048L;
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(nullable = false, unique = true)
-	private long id;
+	@Column(name = "dogId",nullable = false, unique = true)
+	private long dogId;
 	private String dogName;
 	private int dogAge;
 	
-	public long getId() {
-		return id;
+
+	public long getDogId() {
+		return dogId;
 	}
-	public void setId(long id) {
-		this.id = id;
+	public void setDogId(long dogId) {
+		this.dogId = dogId;
 	}
 	public String getDogName() {
 		return dogName;

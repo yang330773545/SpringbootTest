@@ -5,6 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.vinzor.dao.ChildReposity;
+import com.vinzor.entity.Child;
 import com.vinzor.entity.Dog;
 import com.vinzor.entity.User;
 import com.vinzor.entity.UserIsDog;
@@ -18,6 +20,8 @@ public class TestController {
 	UserService userService;
 	@Autowired
 	DogService dogService;
+	@Autowired
+	ChildReposity childReposity;
 	@RequestMapping(value="jpa")
 	public List<User> look() {
 		User user=new User();
@@ -30,7 +34,7 @@ public class TestController {
 	@RequestMapping(value="jpaa")
 	public List<Dog> lookdog(){
 		Dog dog=new Dog();
-		dog.setId(1);
+		dog.setDogId(1);;
 		dog.setDogAge(10);
 		dog.setDogName("gouzi");
 		dogService.add(dog);
@@ -39,5 +43,9 @@ public class TestController {
 	@RequestMapping(value="jpaaa")
 	public List<UserIsDog> lookuserisdog(){
 		return userService.findUserIsDog();
+	}
+	@RequestMapping(value="child")
+	public Child lookchildtoys(){
+		return childReposity.findByChildId(1L);
 	}
 }

@@ -5,9 +5,6 @@ import java.io.Serializable;
 //one to one
 public class UserIsDog implements Serializable{
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 2320969806866327584L;
 	public UserIsDog(Dog dog,User user) {
 		this.dog=dog;

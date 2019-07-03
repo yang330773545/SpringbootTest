@@ -9,6 +9,7 @@ import com.vinzor.dao.UserRepository;
 import com.vinzor.entity.User;
 import com.vinzor.entity.UserIsDog;
 
+
 @Service
 public class UserService {
 
@@ -21,6 +22,7 @@ public class UserService {
 	public User add(User user) {
 		return userRepository.save(user);
 	}
+	//为了方便在这里搞了
 	public List<UserIsDog> findUserIsDog(){
 		return userRepository.findUserIsDog();
 	}
