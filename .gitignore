@@ -133,3 +133,7 @@
 /aspect/.gitignore
 /aspect/mvnw
 /aspect/mvnw.cmd
+/mybatisXML/.mvn
+/mybatisXML/.gitignore
+/mybatisXML/mvnw
+/mybatisXML/mvnw.cmd

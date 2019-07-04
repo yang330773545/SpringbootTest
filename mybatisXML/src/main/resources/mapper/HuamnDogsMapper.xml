@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="com.example.demo.mapper.HumanDogs">
+ <resultMap id="BaseHumanMap" type="com.example.demo.entity.Human">
+    <id column="human_id" jdbcType="INTEGER" property="humanId" />
+    <result column="human_name" jdbcType="VARCHAR" property="humanName" />
+   
+     <collection property="dogs"  ofType="Dog">
+		<id column="dog_id" jdbcType="INTEGER" property="dogId"/>
+  		<result column="dog_name" jdbcType="VARCHAR" property="dogName" />
+     </collection>    
+  </resultMap>
+ 		 <select id="findHumanDogsByHumanId" resultMap="BaseHumanMap" parameterType="java.lang.Integer">
+ 			select h.human_id,h.human_name,d.dog_id,d.dog_name FROM human h,dog d  WHERE  h.human_id=d.human_id=#{humanId}
+ 		 </select> 
+ 		 
+ 	
+ </mapper>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="com.example.demo.mapper.FatherMapper">
+ <resultMap id="BaseFatherMap" type="Father">
+    <id column="father_id" jdbcType="INTEGER" property="fatherId" />
+    <result column="father_name" jdbcType="VARCHAR" property="fatherName" />
+    <association property="son" resultMap="BaseSonMap"></association>
+  </resultMap>
+  <resultMap type="Son" id="BaseSonMap">
+      <id column="son_id" jdbcType="INTEGER" property="sonId" />
+   	  <result column="son_name" jdbcType="VARCHAR" property="sonName" />
+  </resultMap>
+ 		 <select id="findFatherSonByFatherId" resultMap="BaseFatherMap" parameterType="java.lang.Integer">
+ 			select f.father_id,f.father_name,s.son_id,s.son_name FROM father f,son s  WHERE  f.father_id=s.father_id=#{fatherId}
+ 		 </select> 
+ 		 
+ 	
+ </mapper>
