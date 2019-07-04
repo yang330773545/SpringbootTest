@@ -13,8 +13,8 @@ import java.lang.reflect.Method;
 
 import com.vinzor.annotation.LogAnnotation;
 
-@Component
-@Aspect
+//@Component
+//@Aspect
 public class LogAspect {
 
 	/**
@@ -63,3 +63,4 @@ public class LogAspect {
         System.out.println("retValue is:" + retValue);
     }
 }
+

@@ -125,3 +125,7 @@
 /githuboauth2/.gitignore
 /githuboauth2/mvnw
 /githuboauth2/mvnw.cmd
+/shiro-jwt/.mvn
+/shiro-jwt/.gitignore
+/shiro-jwt/mvnw
+/shiro-jwt/mvnw.cmd
