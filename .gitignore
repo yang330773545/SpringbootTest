@@ -129,3 +129,7 @@
 /shiro-jwt/.gitignore
 /shiro-jwt/mvnw
 /shiro-jwt/mvnw.cmd
+/aspect/.mvn
+/aspect/.gitignore
+/aspect/mvnw
+/aspect/mvnw.cmd
