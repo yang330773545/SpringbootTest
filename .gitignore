@@ -137,3 +137,8 @@
 /mybatisXML/.gitignore
 /mybatisXML/mvnw
 /mybatisXML/mvnw.cmd
+/flux-security/.mvn
+/flux-security/.gitignore
+/flux-security/mvnw
+/flux-security/mvnw.cmd
+/mongodb/mvnw.cmd
