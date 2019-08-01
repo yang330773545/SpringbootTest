@@ -142,3 +142,7 @@
 /flux-security/mvnw
 /flux-security/mvnw.cmd
 /mongodb/mvnw.cmd
+/docker-test/.mvn
+/docker-test/.gitignore
+/docker-test/mvnw
+/docker-test/mvnw.cmd
