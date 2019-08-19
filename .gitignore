@@ -146,3 +146,7 @@
 /docker-test/.gitignore
 /docker-test/mvnw
 /docker-test/mvnw.cmd
+/elasticsearch/.mvn
+/elasticsearch/.gitignore
+/elasticsearch/mvnw
+/elasticsearch/mvnw.cmd
