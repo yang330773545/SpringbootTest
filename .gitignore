@@ -150,3 +150,4 @@
 /elasticsearch/.gitignore
 /elasticsearch/mvnw
 /elasticsearch/mvnw.cmd
+/.idea
