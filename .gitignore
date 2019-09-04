@@ -151,3 +151,7 @@
 /elasticsearch/mvnw
 /elasticsearch/mvnw.cmd
 /.idea
+/spring-session/.mvn
+/spring-session/.gitignore
+/spring-session/mvnw
+/spring-session/mvnw.cmd
