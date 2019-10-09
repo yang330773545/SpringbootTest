@@ -155,3 +155,7 @@
 /spring-session/.gitignore
 /spring-session/mvnw
 /spring-session/mvnw.cmd
+/404test/.mvn
+/404test/.gitignore
+/404test/mvnw.cmd
+/404test/mvnw
