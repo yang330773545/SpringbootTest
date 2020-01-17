@@ -159,3 +159,6 @@
 /404test/.gitignore
 /404test/mvnw.cmd
 /404test/mvnw
+/spring-hateoas/.mvn
+/spring-hateoas/mvnw.cmd
+/spring-hateoas/mvnw
