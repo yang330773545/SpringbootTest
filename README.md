@@ -128,6 +128,8 @@ redis使用例子
 邮件服务器
 ### shiro-session
 将session放入redis
+### spring-hoteoas
+Richardson 提出的 REST 成熟度模型第四个层次在资源的表达中包含了链接信息。客户端可以根据链接来发现可以执行的动作。
 ### we-not-chat
 webSocket使用
 ### web-flux
