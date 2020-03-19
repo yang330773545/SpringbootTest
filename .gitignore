@@ -162,3 +162,6 @@
 /spring-hateoas/.mvn
 /spring-hateoas/mvnw.cmd
 /spring-hateoas/mvnw
+/kafka/.mvn
+/kafka/*.cmd
+/kafka/mvnw
