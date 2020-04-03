@@ -165,3 +165,9 @@
 /kafka/.mvn
 /kafka/*.cmd
 /kafka/mvnw
+/spring-hateoas/.gitignore
+/kafka/.gitignore
+/shiro-session/.settings
+/shiro-session/target
+/shiro-session/.classpath
+/shiro-session/*.project
