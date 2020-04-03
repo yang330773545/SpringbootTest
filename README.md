@@ -1,10 +1,4 @@
-## 改为springboot2.1.6 之后Eclipse中pom第一行报错
-```
-	<properties>
-		<java.version>1.8</java.version>
-		<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
-	</properties>
-```
+##SpringBoot使用示例
 ### 404test
 设置404页面<br>
 ### Actuator
@@ -81,6 +75,14 @@ REST成熟度模型第四个层次（具体可参考Hoteoas）
 WebSocker实现双向消息
 ### web-flux
 springwebflux的使用
+
+### springboot2.1.6 之后Eclipse中pom第一行报错解决方法
+```
+	<properties>
+		<java.version>1.8</java.version>
+		<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
+	</properties>
+```
 *** 
 Markdown示例
 
