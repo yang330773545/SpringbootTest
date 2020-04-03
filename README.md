@@ -72,7 +72,7 @@ redis使用例子
 ### shiro-jwt
 shiro整合jwt进行鉴权
 ### shiro-session
-整合shiro将session放入redis中
+整合shiro将session放入redis中,定时任务使用
 ### spring-hoteoas 
 REST成熟度模型第四个层次（具体可参考Hoteoas）
 ### we-not-chat
