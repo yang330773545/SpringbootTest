@@ -45,6 +45,8 @@ MyBatis注解方式的使用（里边也使用了shiro）
 使用MultipartFile来完成文件上传下载
 ### githuboauth2
 github的oauth2.0授权示例
+### gzcloud
+使用oshi获取硬件信息
 ### jpa
 SpringBootJpa示例
 ### jwt
