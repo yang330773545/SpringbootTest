@@ -171,3 +171,9 @@
 /shiro-session/target
 /shiro-session/.classpath
 /shiro-session/*.project
+/dtztc/.idea
+/gzcloud/.mvn
+/gzcloud/.gitignore
+/gzcloud/HELP.md
+/gzcloud/mvnw
+/gzcloud/mvnw.cmd
