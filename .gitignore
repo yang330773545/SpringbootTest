@@ -1,8 +1,12 @@
+.idea
+.setting
+log
+target
+
 mvnw
 *.cmd
 *.gitignore
 .mvn
-.idea
 HELP.md
 *.jar
 *.log
@@ -10,4 +14,4 @@ HELP.md
 .classpath
 .project
 *.iml
-target
+
