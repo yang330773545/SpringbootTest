@@ -24,8 +24,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @SuppressWarnings(value="all")
 public class AliyunUtil {
 
-	private final String ACCESSKEY_ID="LTAImUFAkIhwsApM";
-	private final String ACCESS_KEY_SECRET="ZrBIJj7VAgjMypzmgqIISAZW5ae8qu";
+	private final String ACCESSKEY_ID="";
+	private final String ACCESS_KEY_SECRET="";
 	private final String TEMPLATE_CODE="SMS_162733981";
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 	@Autowired
