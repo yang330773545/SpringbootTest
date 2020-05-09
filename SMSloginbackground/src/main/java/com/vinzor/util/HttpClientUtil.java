@@ -20,7 +20,7 @@ public class HttpClientUtil {
 	//网易云信请求路径URl
 	private static String PROVIDER_URL="https://api.netease.im/sms/sendcode.action";
 	//网易云信分配的账号
-	private static String APP_KEY="b7f2e9abb1075f0f454b5ec6c8a3fab9";
+	private static String APP_KEY="";
 	////网易云信分配的密钥
 	private static String APP_SECRET="0503c41445f6";
 	//验证码的长度
