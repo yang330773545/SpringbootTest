@@ -18,7 +18,7 @@ public class ZhenziyunUtil {
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 	private static final String API_URL="https://sms_developer.zhenzikj.com";
 	private static final String APP_ID="101173";
-	private static final String APP_SECRET="7af8a2e2-09c7-478a-a608-c29bce0dbc2e";
+	private static final String APP_SECRET="";
 	@Autowired
 	StringRedisUtil stringRedisUtil;
 	public boolean sendSMS(String phone) {
