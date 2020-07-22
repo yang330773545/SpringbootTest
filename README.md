@@ -23,24 +23,24 @@ SpringApplication.run方法执行前执行一些初始化操作（@Order实现�
 使用maven插件完成docker镜像使用mvn package docker:build命令打包
 ### elasticsearch
 ElasticSearch的使用
-### boot-security
-spring security在springmvc和springwebflux中使用
-### boot-swagger
-自动生成api集合网页主要是注解使用详见项目注释
-### boot-useragentutil
-使用useragentutil来获取用户使用的浏览器等信息
-### command-line-runner
-实现CommandLineRunner接口完成项目启动前需要干的事
-### devtools
-实现热部署
 ### examplemybatis
 MyBatis注解方式的使用（里边也使用了shiro）
 ### file
 使用MultipartFile来完成文件上传下载
+### boot-security
+spring security在springmvc和springwebflux中使用
 ### githuboauth2
 github的oauth2.0授权示例
+### guava
+谷歌guava使用
 ### gzcloud
 使用oshi获取硬件信息
+### http-client-pool
+httpClient连接池
+### http
+发送http请求 同步和异步
+### java-executor
+executors简单使用
 ### jpa
 SpringBootJpa示例
 ### jwt
