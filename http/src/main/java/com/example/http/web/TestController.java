@@ -6,6 +6,9 @@ import com.example.http.testsend.WebClientTest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 @RestController
 public class TestController {
 
@@ -47,5 +50,10 @@ public class TestController {
         webClientTest.testEntity(1);
         webClientTest.postTestEntity();
         webClientTest.patchJson();
+        String s = "asdadsadwwasd";
+        Map<Character,Integer> map = new LinkedHashMap<>();
+        char[] chars = s.toCharArray();
+
+        }
     }
 }
