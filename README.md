@@ -9,6 +9,8 @@
 使用spring-boot-admin单个springboot项目（也可监控Eureka集群）<br>
 ### aspect
 使用aspect实现AOP
+### batch
+批处理
 ### boot-banner
 将项目启动的时候springboot变成自己公司或个人的名称.txt或者动图.gif（txt会先执行）<br> 
 ### boot-swagger
@@ -47,8 +49,12 @@ SpringBootJpa示例
 使用HTTPS和JWT示例
 ### kafka
 kafka使用示例
+### ldap
+ldap 单点登录
 ### memcached
 memcached使用示例
+### mobile
+判断用户设备和设置网站偏好
 ### mongodb
 mongodb使用示例
 ### mq-customer mq-producer
