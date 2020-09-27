@@ -1,0 +1,48 @@
+spring.cloud.vault:
+  host: localhost
+  port: 8200
+  scheme: https
+  uri: https://localhost:8200
+  connection-timeout: 5000 # 单位为毫秒
+  read-timeout: 15000
+  config:
+    order: -10  # 设置来源顺序
+  authentication: TOKEN # 认证方式 https://docs.spring.io/spring-cloud-vault/docs/2.2.5.RELEASE/reference/html/#_client_side_usage
+  token: 19aefa97-cccc-bbbb-aaaa-225940e63d76
+  kv: # KV
+    enabled: true
+    backend: secret # 装载的路径
+    profile-separator: '/' # 使用配置文件在属性源中将配置文件名称与上下文分开
+    default-context: application # 上下文名称
+    application-name: my-app
+  fail-fast: true # 快速失败
+
+#  consul:
+#    enabled: true
+#    role: readonly
+#    backend: consul
+#    token-property: spring.cloud.consul.token
+#  rabbitmq:
+#    enabled: true
+#    role: readonly
+#    backend: rabbitmq
+#    username-property: spring.rabbitmq.username
+#    password-property: spring.rabbitmq.password
+#  aws:
+#    enabled: true
+#    role: readonly
+#    backend: aws
+#    access-key-property: cloud.aws.credentials.accessKey
+#    secret-key-property: cloud.aws.credentials.secretKey
+#  mysql:
+#    enabled: true
+#    role: readonly
+#    backend: mysql
+#    username-property: spring.datasource.username
+#    password-property: spring.datasource.password
+#  mongodb:
+#    enabled: true
+#    role: readonly
+#    backend: mongodb
+#    username-property: spring.data.mongodb.username
+#    password-property: spring.data.mongodb.password
