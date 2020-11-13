@@ -10,7 +10,7 @@ import org.springframework.data.elasticsearch.annotations.FieldType;
 @Document(indexName = "teacher",type="mytest")
 public class Teacher implements Serializable{
 	private static final long serialVersionUID = 123123123123213L;
-	private int id;
+	private Integer id;
 	//  type自动检测属性的类型，可以根据实际情况自己设置
 	@Field(type = FieldType.Keyword)
 	private String name;
@@ -19,7 +19,7 @@ public class Teacher implements Serializable{
 	public int getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 	public String getName() {
