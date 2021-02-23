@@ -1,0 +1,16 @@
+spring:
+  redis:
+    database: 0
+    host: 192.168.177.6
+    port: 6379
+    password: admin123
+#    ssl:
+    timeout: 3000
+    cluster:
+      nodes: 10.0.29.30:6379, 10.0.29.95:6379, 10.0.29.205:6379
+
+#    sentinel:
+#      master:
+#      nodes:
+
+
